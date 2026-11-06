@@ -1,27 +1,33 @@
 import { useState } from "react"
+import estilos from "../styles/Contador.module.css"
 
 export default function Home() {
     return (
-        <div>
-            <h1>Contador</h1>
-            <Contador />
-        </div>
+        <main className={estilos.pagina}>
+            <div className={estilos.cartao}>
+                <h1 className={estilos.titulo}>Contador</h1>
+                <Contador />
+            </div>
+        </main>
     )
 }
 
 function Contador() {
-    const [numero, setNumero] = useState(0);
+    const [numero, setNumero] = useState(0)
 
     function adicionarContador() {
-        setNumero(numero + 1);
+        setNumero(numero + 1)
     }
 
     return (
-        <div>
-            <div data-testid="valor-contador">
-                {numero}
+        <>
+            <div className={estilos.visor}>
+                {/* key muda a cada clique para repetir a animação do número */}
+                <span key={numero} className={estilos.numero} data-testid="valor-contador">
+                    {numero}
+                </span>
             </div>
-            <button onClick={adicionarContador}>Adicionar</button>
-        </div>
+            <button className={estilos.botao} onClick={adicionarContador}>Adicionar</button>
+        </>
     )
 }

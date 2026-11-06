@@ -1,5 +1,5 @@
 {
-  "name": "contador",
+  "name": "contador-bdd",
   "version": "1.0.0",
   "type": "module",
   "description": "Contador em Next.js com testes BDD (Cucumber + Playwright) escritos em português",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JaoFraccaroli/Contador.git"
+    "url": "git+https://github.com/JaoFraccaroli/contador-bdd.git"
   },
   "keywords": [],
   "author": "João Marcelo Fraccaroli Filho",

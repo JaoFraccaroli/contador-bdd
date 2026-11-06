@@ -1,8 +1,10 @@
 # Contador com testes BDD
 
-![Testes BDD](https://github.com/JaoFraccaroli/Contador/actions/workflows/testes-bdd.yml/badge.svg)
+![Testes BDD](https://github.com/JaoFraccaroli/contador-bdd/actions/workflows/testes-bdd.yml/badge.svg)
 
-Aplicação simples de contador em **Next.js/React** usada para praticar **BDD (Behavior-Driven Development)**: o comportamento esperado é descrito em **Gherkin, em português**, e automatizado com **Cucumber + Playwright**.
+Aplicação de contador em **Next.js/React** usada para praticar **BDD (Behavior-Driven Development)**: o comportamento esperado é descrito em **Gherkin, em português**, e automatizado com **Cucumber + Playwright**.
+
+![Prévia no computador e no celular](docs/previa.png)
 
 ## Cenários testados
 
@@ -27,6 +29,10 @@ Funcionalidade: Contador
 
   Cenário: O valor volta a zero ao recarregar a página
 ```
+
+## Visual
+
+Tema escuro com o conteúdo centralizado na tela: um cartão com o número em destaque dentro de um visor circular e o botão "Adicionar". O número dá um pulinho a cada clique (desligado para quem configurou o sistema para reduzir movimento), e o layout se adapta ao celular.
 
 ## Tecnologias
 

@@ -1,0 +1,94 @@
+/* Tela inteira, com o conteúdo centralizado na vertical e na horizontal */
+.pagina {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.cartao {
+    width: 100%;
+    max-width: 360px;
+    padding: 36px 28px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+}
+
+.titulo {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+.visor {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #1e293b, #0f172a 70%);
+    border: 2px solid rgba(129, 140, 248, 0.35);
+    box-shadow: inset 0 0 30px rgba(99, 102, 241, 0.25), 0 0 40px rgba(99, 102, 241, 0.15);
+}
+
+.numero {
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    color: #f8fafc;
+    text-shadow: 0 0 24px rgba(129, 140, 248, 0.55);
+    animation: pulo 0.25s ease-out;
+}
+
+/* Pulinho no número a cada clique */
+@keyframes pulo {
+    0% { transform: scale(1.25); color: #a5b4fc; }
+    100% { transform: scale(1); }
+}
+
+.botao {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6366f1, #0ea5e9);
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.35);
+    transition: transform 0.12s, box-shadow 0.2s, filter 0.2s;
+}
+
+.botao:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 12px 30px rgba(79, 70, 229, 0.5);
+}
+
+.botao:active {
+    transform: scale(0.97);
+}
+
+.botao:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .numero {
+        animation: none;
+    }
+}
